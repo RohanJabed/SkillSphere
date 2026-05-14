@@ -24,7 +24,7 @@ const UserMenu = () => {
     return (
         <div className="dropdown dropdown-end">
             <label tabIndex={0} className="flex items-center gap-2 cursor-pointer">
-                <div className="w-9 h-9 rounded-full overflow-hidden bg-gray-200 border-2 border-primary">
+                <div className="w-9 h-9 shrink-0 rounded-full overflow-hidden bg-gray-200 border-2 border-primary" style={{minWidth:'36px', maxWidth:'36px', minHeight:'36px', maxHeight:'36px'}}>
                     {user.image
                         ? <img src={user.image} alt={user.name} className="w-full h-full object-cover" onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} />
                         : null
