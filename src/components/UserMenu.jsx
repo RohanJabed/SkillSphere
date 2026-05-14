@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 const UserMenu = () => {
     const { data: session } = useSession();
     const user = session?.user;
+    console.log('session user:', user);
     const router = useRouter();
 
     const handleSignOut = async () => {
