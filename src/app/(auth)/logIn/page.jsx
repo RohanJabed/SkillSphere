@@ -19,7 +19,7 @@ const LogInPage = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 w-full max-w-md">
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 w-full max-w-md animate__animated animate__fadeInUp">
                 <h1 className="text-2xl font-bold text-gray-900 mb-1">Welcome Back! 👋</h1>
                 <p className="text-gray-500 text-sm mb-6">Login to continue your learning journey.</p>
 

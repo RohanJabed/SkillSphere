@@ -33,7 +33,7 @@ const ProfilePage = () => {
 
     return (
         <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 w-full max-w-md">
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 w-full max-w-md animate__animated animate__fadeInUp">
 
                 {/* Avatar */}
                 <div className="flex flex-col items-center mb-6">

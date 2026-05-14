@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 const UserMenu = () => {
     const { data: session } = useSession();
     const user = session?.user;
-    console.log('session user:', user);
     const router = useRouter();
 
     const handleSignOut = async () => {
@@ -24,9 +23,9 @@ const UserMenu = () => {
     return (
         <div className="dropdown dropdown-end">
             <label tabIndex={0} className="flex items-center gap-2 cursor-pointer">
-                <div className="w-9 h-9 shrink-0 rounded-full overflow-hidden bg-gray-200 border-2 border-primary" style={{minWidth:'36px', maxWidth:'36px', minHeight:'36px', maxHeight:'36px'}}>
+                <div className="w-9 h-9 shrink-0 rounded-full overflow-hidden bg-gray-200 border-2 border-primary" style={{width:'36px', height:'36px', minWidth:'36px', minHeight:'36px', maxWidth:'36px', maxHeight:'36px'}}>
                     {user.image
-                        ? <img src={user.image} alt={user.name} className="w-full h-full object-cover" onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} />
+                        ? <img src={user.image} alt={user.name} style={{width:'36px', height:'36px', objectFit:'cover'}} onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} />
                         : null
                     }
                     <div style={{display: user.image ? 'none' : 'flex'}} className="w-full h-full items-center justify-center text-gray-500 font-bold text-sm">
