@@ -3,6 +3,7 @@ import { authClient } from '@/lib/auth-client';
 import { useSession } from '@/lib/auth-client';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const ProfilePage = () => {
     const { data: session } = useSession();
@@ -21,8 +22,8 @@ const ProfilePage = () => {
             name: data.name,
             image: data.image,
         });
-        if (!error) setSuccess(true);
-        else alert(error.message);
+        if (!error) { toast.success('Profile updated successfully!'); setSuccess(true); }
+        else toast.error(error.message);
     };
 
     if (!user) return (

@@ -9,14 +9,14 @@ const CoursePage = async ({ searchParams }) => {
     const filtered = search ? courses.filter(c => c.title.toLowerCase().includes(search)) : courses;
 
     return (
-        <div className="max-w-6xl mx-auto px-6 py-10 flex gap-6">
-            <div className="w-56 shrink-0">
+        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col lg:flex-row gap-6">
+            <div className="w-full lg:w-56 shrink-0">
                 <LeftSideBar categories={categories} />
             </div>
             <div className="flex-1">
                 <h1 className="text-2xl font-bold mb-1">{search ? `Results for "${search}"` : 'All Courses'}</h1>
                 <p className="text-gray-500 text-sm mb-6">{filtered.length} courses available</p>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {filtered.map(course => (
                         <div key={course.id} className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col">
                             <img src={course.image} alt={course.title} className="w-full h-44 object-cover shrink-0" />

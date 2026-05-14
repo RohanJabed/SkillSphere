@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const RegisterPage = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -14,8 +15,8 @@ const RegisterPage = () => {
             email: data.email,
             password: data.password,
         });
-        if (res) router.push('/logIn');
-        if (error) alert(error.message);
+        if (res) { toast.success('Account created! Please log in.'); router.push('/logIn'); }
+        if (error) toast.error(error.message);
     };
 
     return (

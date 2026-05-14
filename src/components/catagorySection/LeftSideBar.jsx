@@ -3,7 +3,7 @@ const LeftSideBar = ({ categories, activeId }) => {
     return (
         <div className="bg-base-100 rounded-xl shadow-sm border border-base-200 p-4">
             <h2 className="text-lg font-bold mb-4 pb-2 border-b border-base-200">All Categories</h2>
-            <ul className="flex flex-col gap-1">
+            <ul className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible">
                 {categories?.map(category =>
                   (
                     <li key={category.id}>
