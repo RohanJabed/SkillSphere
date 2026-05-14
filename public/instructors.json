@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "expertise": "Full Stack Web Development",
+    "experience": "8 years",
+    "rating": 4.9,
+    "students": 12000,
+    "image": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "john.doe@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Williams",
+    "expertise": "UI/UX Design",
+    "experience": "6 years",
+    "rating": 4.8,
+    "students": 9500,
+    "image": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "sarah.williams@example.com"
+  },
+  {
+    "id": 3,
+    "name": "Michael Smith",
+    "expertise": "Data Science & Machine Learning",
+    "experience": "10 years",
+    "rating": 5.0,
+    "students": 15000,
+    "image": "https://randomuser.me/api/portraits/men/56.jpg",
+    "email": "michael.smith@example.com"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "title": "Modern React & Next.js",
+    "instructor": "John Doe",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "students": 12500,
+    "price": 49.99,
+    "level": "Intermediate",
+    "category": "Development",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600",
+    "description": "Build fast and modern web applications using React, Next.js, and Tailwind CSS."
+  },
+  {
+    "id": 2,
+    "title": "AI & Machine Learning Bootcamp",
+    "instructor": "Michael Smith",
+    "duration": "30 hours",
+    "rating": 5.0,
+    "students": 18000,
+    "price": 79.99,
+    "level": "Advanced",
+    "category": "Data Science",
+    "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600",
+    "description": "Learn artificial intelligence, machine learning, and deep learning with Python."
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design with Figma",
+    "instructor": "Sarah Williams",
+    "duration": "14 hours",
+    "rating": 4.8,
+    "students": 9800,
+    "price": 39.99,
+    "level": "Beginner",
+    "category": "Design",
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600",
+    "description": "Master UI/UX design principles and create beautiful interfaces using Figma."
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch using HTML, CSS, JavaScript, React, Node.js, and MongoDB.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Masterclass",
+    "instructor": "Sarah Williams",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master modern UI and UX design principles using Figma and Adobe XD.",
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Data Science with Python",
+    "instructor": "Michael Smith",
+    "duration": "25 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Learn data analysis, visualization, and machine learning using Python.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600",
+    "category": "Data Science"
+  }
+]

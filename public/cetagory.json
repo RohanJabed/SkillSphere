@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "React.js Masterclass",
+    "instructor": "Sarah Smith",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master React with hooks, context, and real-world projects.",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Emily Johnson",
+    "duration": "10 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn the basics of user interface and user experience design.",
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+    "title": "Python for Data Science",
+    "instructor": "Michael Brown",
+    "duration": "25 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Analyze data and build machine learning models using Python.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600",
+    "category": "Data Science"
+  },
+  {
+    "id": 5,
+    "title": "Digital Marketing Mastery",
+    "instructor": "Laura Wilson",
+    "duration": "12 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn SEO, social media marketing, and paid ads strategies.",
+    "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600",
+    "category": "Marketing"
+  },
+  {
+    "id": 6,
+    "title": "Advanced JavaScript Concepts",
+    "instructor": "David Lee",
+    "duration": "18 hours",
+    "rating": 4.8,
+    "level": "Advanced",
+    "description": "Deep dive into closures, prototypes, async patterns, and performance.",
+    "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600",
+    "category": "Development"
+  }
+]
