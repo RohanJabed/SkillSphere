@@ -1,11 +1,22 @@
 'use client';
 import { useForm } from "react-hook-form";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
 
 const RegisterPage = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const router = useRouter();
 
-    const handleFormSubmit = (data) => console.log(data);
+    const handleFormSubmit = async (data) => {
+        const { data: res, error } = await authClient.signUp.email({
+            name: data.name,
+            email: data.email,
+            password: data.password,
+        });
+        if (res) router.push('/logIn');
+        if (error) alert(error.message);
+    };
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -42,7 +53,7 @@ const RegisterPage = () => {
                             type="password"
                             placeholder="••••••••"
                             className={`input input-bordered w-full ${errors.password ? 'border-red-400' : ''}`}
-                            {...register('password', { required: 'Password is required', minLength: { value: 6, message: 'Minimum 6 characters' } })}
+                            {...register('password', { required: 'Password is required', minLength: { value: 8, message: 'Minimum 8 characters' } })}
                         />
                         {errors.password && <p className="text-red-400 text-xs mt-1">{errors.password.message}</p>}
                     </div>
@@ -62,6 +73,13 @@ const RegisterPage = () => {
                     </div>
 
                     <button type="submit" className="btn btn-primary w-full text-white rounded-full">Register</button>
+
+                    <div className="divider text-xs text-gray-400">or</div>
+
+                    <button type="button" onClick={() => authClient.signIn.social({ provider: 'google', callbackURL: '/course' })} className="btn btn-outline w-full rounded-full gap-2">
+                        <img src="https://www.google.com/favicon.ico" className="w-4 h-4" />
+                        Continue with Google
+                    </button>
                 </form>
 
                 <p className="text-center text-sm text-gray-500 mt-4">

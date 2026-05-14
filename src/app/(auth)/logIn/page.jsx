@@ -1,11 +1,21 @@
 'use client';
 import { useForm } from "react-hook-form";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
 
 const LogInPage = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const handleFormSubmit = (data) => console.log(data);
+    const handleFormSubmit = async(data) => {
+        const { email, password } = data;
+        const { data: res, error } = await authClient.signIn.email({
+            email: email, 
+            password: password,
+            rememberMe: true,
+            callbackURL: "/",
+        });
+        console.log("Login response:", res, error);
+    }
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -34,12 +44,19 @@ const LogInPage = () => {
                             type="password"
                             placeholder="••••••••"
                             className={`input input-bordered w-full ${errors.password ? 'border-red-400' : ''}`}
-                            {...register('password', { required: 'Password is required', minLength: { value: 6, message: 'Minimum 6 characters' } })}
+                            {...register('password', { required: 'Password is required', minLength: { value: 8, message: 'Minimum 8 characters' } })}
                         />
                         {errors.password && <p className="text-red-400 text-xs mt-1">{errors.password.message}</p>}
                     </div>
 
                     <button type="submit" className="btn btn-primary w-full text-white rounded-full">Login</button>
+
+                    <div className="divider text-xs text-gray-400">or</div>
+
+                    <button type="button" onClick={() => authClient.signIn.social({ provider: 'google', callbackURL: '/course' })} className="btn btn-outline w-full rounded-full gap-2">
+                        <img src="https://www.google.com/favicon.ico" className="w-4 h-4" />
+                        Continue with Google
+                    </button>
                 </form>
 
                 <p className="text-center text-sm text-gray-500 mt-4">
