@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Skill Sphere
 
-## Getting Started
+## 📌 Project Purpose
+Skill Sphere is an online learning platform where users can explore courses and manage authentication securely. The project is built with Next.js and modern web technologies to provide a fast and responsive user experience.
 
-First, run the development server:
+---
+
+## 🌐 Live URL
+🔗 https://your-live-site-url.com
+
+---
+
+## 🚀 Key Features
+
+- 🔐 User Authentication & Protected Routes
+- 📚 Browse and Explore Courses
+- 📖 Dynamic Course Details Page
+- ⚡ Built with Next.js App Router
+- 🎨 Responsive UI using Tailwind CSS
+- 🔄 Dynamic Routing with Next.js
+- 📡 API Data Fetching
+- 🛡 Middleware Route Protection
+
+---
+
+## 🛠 Technologies Used
+
+- Next.js
+- React
+- Tailwind CSS
+- MongoDB
+- Better Auth
+- JavaScript
+
+---
+
+## 📦 NPM Packages Used
+
+```bash
+npm install next react react-dom
+npm install tailwindcss
+npm install mongodb
+npm install better-auth
+npm install react-icons
+
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Clone the repository
+
+```bash
+git clone https://github.com/your-username/skill-sphere.git
+```
+
+### Go to project folder
+
+```bash
+cd skill-sphere
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env` file and add:
 
-## Learn More
+```env
+MONGODB_URI=your_mongodb_connection_string
+BETTER_AUTH_SECRET=your_secret_key
+BETTER_AUTH_URL=http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👨‍💻 Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Developed by Rohan
