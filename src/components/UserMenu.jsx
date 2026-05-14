@@ -26,11 +26,12 @@ const UserMenu = () => {
             <label tabIndex={0} className="flex items-center gap-2 cursor-pointer">
                 <div className="w-9 h-9 rounded-full overflow-hidden bg-gray-200 border-2 border-primary">
                     {user.image
-                        ? <img src={user.image} alt={user.name} className="w-full h-full object-cover" />
-                        : <div className="w-full h-full flex items-center justify-center text-gray-500 font-bold text-sm">
-                            {user.name?.charAt(0).toUpperCase()}
-                          </div>
+                        ? <img src={user.image} alt={user.name} className="w-full h-full object-cover" onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} />
+                        : null
                     }
+                    <div style={{display: user.image ? 'none' : 'flex'}} className="w-full h-full items-center justify-center text-gray-500 font-bold text-sm">
+                        {user.name?.charAt(0).toUpperCase()}
+                    </div>
                 </div>
                 <span className="text-sm font-medium text-gray-700 hidden lg:block">{user.name}</span>
             </label>

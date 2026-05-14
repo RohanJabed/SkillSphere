@@ -39,9 +39,10 @@ const ProfilePage = () => {
                 <div className="flex flex-col items-center mb-6">
                     <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-200 mb-3">
                         {user.image
-                            ? <img src={user.image} alt={user.name} className="w-full h-full object-cover" />
-                            : <div className="w-full h-full flex items-center justify-center text-3xl text-gray-400">👤</div>
+                            ? <img src={user.image} alt={user.name} className="w-full h-full object-cover" onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }} />
+                            : null
                         }
+                        <div style={{display: user.image ? 'none' : 'flex'}} className="w-full h-full items-center justify-center text-3xl text-gray-400">👤</div>
                     </div>
                     <h2 className="font-bold text-gray-900 text-lg">{user.name}</h2>
                     <p className="text-gray-400 text-sm">{user.email}</p>
