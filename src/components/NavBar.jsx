@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import SearchBar from './SearchBar';
+import UserMenu from './UserMenu';
 
 const NavBar = () => {
     return (
@@ -24,8 +25,7 @@ const NavBar = () => {
             {/* Right: Search + Auth */}
             <div className="navbar-end gap-3 hidden lg:flex">
                 <SearchBar />
-                <Link href="/logIn" className="btn btn-ghost btn-sm">Login</Link>
-                <Link href="/register" className="btn btn-primary btn-sm text-white">Register</Link>
+                <UserMenu />
             </div>
 
             {/* Mobile hamburger */}
