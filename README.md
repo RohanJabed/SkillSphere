@@ -6,7 +6,7 @@ Skill Sphere is an online learning platform where users can explore courses and 
 ---
 
 ## 🌐 Live URL
-🔗 https://your-live-site-url.com
+🔗 skill-sphere-thbk.vercel.app
 
 ---
 
